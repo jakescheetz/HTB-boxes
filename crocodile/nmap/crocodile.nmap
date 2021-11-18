@@ -1,0 +1,56 @@
+# Nmap 7.91 scan initiated Thu Nov 11 12:05:10 2021 as: nmap -sC -sV -v -oA ./nmap/crocodile 10.129.1.15
+Nmap scan report for 10.129.1.15
+Host is up (0.15s latency).
+Not shown: 975 closed ports
+PORT      STATE    SERVICE       VERSION
+7/tcp     filtered echo
+21/tcp    open     ftp           vsftpd 3.0.3
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| -rw-r--r--    1 ftp      ftp            33 Jun 08 10:58 allowed.userlist
+|_-rw-r--r--    1 ftp      ftp            62 Apr 20  2021 allowed.userlist.passwd
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to ::ffff:10.10.14.47
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 4
+|      vsFTPd 3.0.3 - secure, fast, stable
+|_End of status
+80/tcp    open     http          Apache httpd 2.4.41 ((Ubuntu))
+|_http-favicon: Unknown favicon MD5: 1248E68909EAE600881B8DB1AD07F356
+| http-methods: 
+|_  Supported Methods: POST OPTIONS HEAD GET
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+|_http-title: Smash - Bootstrap Business Template
+82/tcp    filtered xfer
+427/tcp   filtered svrloc
+1098/tcp  filtered rmiactivation
+1169/tcp  filtered tripwire
+1455/tcp  filtered esl-lm
+1718/tcp  filtered h323gatedisc
+2009/tcp  filtered news
+2010/tcp  filtered search
+2040/tcp  filtered lam
+2399/tcp  filtered fmpro-fdal
+3003/tcp  filtered cgms
+5060/tcp  filtered sip
+5877/tcp  filtered unknown
+6007/tcp  filtered X11:7
+7200/tcp  filtered fodms
+9099/tcp  filtered unknown
+9998/tcp  filtered distinct32
+10024/tcp filtered unknown
+19101/tcp filtered unknown
+19780/tcp filtered unknown
+41511/tcp filtered unknown
+52869/tcp filtered unknown
+Service Info: OS: Unix
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Nov 11 12:06:04 2021 -- 1 IP address (1 host up) scanned in 53.87 seconds
